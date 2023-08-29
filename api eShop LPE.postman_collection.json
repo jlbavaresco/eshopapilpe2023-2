@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "cc7d373e-617d-4230-8c19-7d3e1495d6ec",
+		"name": "api eShop LPE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10292792"
+	},
+	"item": [
+		{
+			"name": "get categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Categorria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\" : \"Informática\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza categoria",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"codigo\": 7,\n        \"nome\": \"Informática teste\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categoria por código",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria/6",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

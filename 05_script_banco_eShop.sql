@@ -50,7 +50,7 @@ values  ('Jorge', 'jorgebavaresco@ifsul.edu.br','Mouse muito preciso', 5, curren
 select p.codigo as codigo, p.nome as nome, p.descricao as descricao, p.quantidade_estoque as quantidade_estoque, p.ativo as ativo, p.valor as valor, to_char(p.data_cadastro,'YYYY-MM-DD') as data_cadastro, p.categoria as categoria, c.nome as categoria_nome
 from produtos p
 join categorias c on p.categoria = c.codigo
-order by p.codigo
+order by p.codigo;
 
 select * from avaliacoes;
 

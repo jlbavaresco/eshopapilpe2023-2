@@ -10,7 +10,13 @@
 			"name": "get categorias",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImVtYWlsIjoiam9yZ2ViYXZhcmVzY29AaWZzdWwuZWR1LmJyIiwibm9tZSI6IkpvcmdlIEJhdmFyZXNjbyIsInRpcG8iOiJBIiwidGVsZWZvbmUiOiIoNTQpOTk5ODQtNDM0OCIsInJvbGVzIjpbIkFERENBVEVHT1JJQSIsIlJFTU9WRUNBVEVHT1JJQSJdfSwiaWF0IjoxNjk2MzM0MzU3LCJleHAiOjE2OTYzMzQ2NTd9.4uTLUTeplXDl-_XGzuwyeMX3QVMYaX9SrEzWz-mP35k",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "localhost:3002/categoria",
 					"host": [
@@ -28,7 +34,13 @@
 			"name": "add Categorria",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImVtYWlsIjoiam9yZ2ViYXZhcmVzY29AaWZzdWwuZWR1LmJyIiwibm9tZSI6IkpvcmdlIEJhdmFyZXNjbyIsInRpcG8iOiJBIiwidGVsZWZvbmUiOiIoNTQpOTk5ODQtNDM0OCJ9LCJpYXQiOjE2OTYzMzM5NjMsImV4cCI6MTY5NjMzNDI2M30.I--9N-USDT13EMqJFUmjDTUoODpLbsK9DJlR-wdd20M",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"nome\" : \"Informática\"\n}",
@@ -46,6 +58,13 @@
 					"port": "3002",
 					"path": [
 						"categoria"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": null,
+							"disabled": true
+						}
 					]
 				}
 			},
@@ -221,6 +240,33 @@
 					"path": [
 						"produto",
 						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\" : \"jorgebavaresco@ifsul.edu.br\", \"senha\" : \"123456\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"login"
 					]
 				}
 			},

@@ -3,6 +3,9 @@ const { getCategoriasDB, addCategoriaDB,
     = require('../usecases/categoriaUseCases')
 
 const getCategorias = async (request, response) => {
+    // capturando o usuario que foi enviado pelo next do verificaJWT
+    console.log('Usuario no getCategorias' + 
+    JSON.stringify(request.usuario));
     await getCategoriasDB()
           .then(data => response.status(200).json(data))
           .catch(err => response.status(400).json({
